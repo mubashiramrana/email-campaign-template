@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from '../../services/firebase/auth.service';
@@ -29,12 +29,27 @@ export class HeaderComponent implements OnInit {
     public navServices: NavService,
     private auth: AuthService,
     private router: Router,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    public renderer: Renderer2
   ) {}
 
   ngOnInit(): void {}
   toggleSwitcher() {
     this.SwitcherService.emitChange(true);
+  }
+
+  changeDirection(){
+    let body = document.querySelector('body');
+    let html = document.querySelector('html');
+    let styleId = document.querySelector('#style');
+    let ltr = document.querySelectorAll('#myonoffswitch54');
+    let rtl = document.querySelectorAll('#myonoffswitch55');
+    html?.setAttribute('dir', 'rtl');
+    body?.classList.add('rtl');
+    styleId?.setAttribute('href','./assets/plugins/bootstrap/css/bootstrap.rtl.css');
+    //remove
+    body?.classList.remove('ltr');
+    sessionStorage.setItem('Nowartl', 'true');
   }
   
   toggleSidebarNotification() {
@@ -42,7 +57,6 @@ export class HeaderComponent implements OnInit {
   }
 
   signout() {
-    this.auth.SignOut();
     this.router.navigate(['/auth/login']);
   }
 

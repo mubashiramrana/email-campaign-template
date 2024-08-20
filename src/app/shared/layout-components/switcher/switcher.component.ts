@@ -16,7 +16,7 @@ import * as switcher from './switcher';
   styleUrls: ['./switcher.component.scss'],
 })
 export class SwitcherComponent implements OnInit {
-  layoutSub: Subscription;
+  layoutSub!: Subscription;
 
   body = document.querySelector('body');
 
@@ -25,31 +25,19 @@ export class SwitcherComponent implements OnInit {
     public renderer: Renderer2,
     public switcherServic: SwitcherService
   ) {
-    this.layoutSub = switcherServic.changeEmitted.subscribe((value) => {
-      if (value) {
-        this.renderer.addClass(
-          this.switcher.nativeElement.firstElementChild,
-          'active'
-        );
-        this.renderer.setStyle(
-          this.switcher.nativeElement.firstElementChild,
-          'right',
-          '0px'
-        );
-        value = true;
-      } else {
-        this.renderer.removeClass(
-          this.switcher.nativeElement.firstElementChild,
-          'active'
-        );
-        this.renderer.setStyle(
-          this.switcher.nativeElement.firstElementChild,
-          'right',
-          '-270px'
-        );
-        value = false;
-      }
+    this.layoutSub = this.switcherServic.changeEmitted.subscribe(value => {
+      this.updateSwitcherState(value);
     });
+  }
+  private updateSwitcherState(value: boolean): void {
+    const switcherElement = this.switcher.nativeElement.firstElementChild;
+    if (value) {
+      this.renderer.addClass(switcherElement, 'active');
+      this.renderer.setStyle(switcherElement, 'right', '0px');
+    } else {
+      this.renderer.removeClass(switcherElement, 'active');
+      this.renderer.setStyle(switcherElement, 'right', '-270px');
+    }
   }
   ngOnInit(): void {
     switcher.localStorageBackUp();

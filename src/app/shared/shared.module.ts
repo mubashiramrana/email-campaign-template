@@ -21,6 +21,7 @@ import { SidemenuToggleDirective } from './directives/sidemenuToggle';
 import { NgScrollbarModule, NG_SCROLLBAR_OPTIONS } from 'ngx-scrollbar';
 import { SwitcherLayoutComponent } from './layout-components/layout/switcher-layout/switcher-layout.component';
 import { HeaderSwitcherComponent } from './header-switcher/header-switcher.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { HeaderSwitcherComponent } from './header-switcher/header-switcher.compo
     SidemenuToggleDirective,
   ],
   imports: [
+    TranslateModule.forChild(),
     CommonModule,
     NgbModule,
     RouterModule,

@@ -20,25 +20,25 @@ const routes: Routes = [
   {
     path: '',
     component: ContentLayoutComponent,
-    canActivate: [AdminGuard],
+    //canActivate: [AdminGuard],
     children: content
   },
   {
     path: '',
     component: SwitcherLayoutComponent,
-    canActivate: [AdminGuard],
+    //canActivate: [AdminGuard],
     children: SwitcherOneRoute
   },
   {
     path: '',
     component: ErrorLayoutComponent,
-    canActivate: [AdminGuard],
+    //canActivate: [AdminGuard],
     children: errorRoute
   },
   {
     path: '',
     component: FullLayoutComponent,
-    canActivate: [AdminGuard],
+    //canActivate: [AdminGuard],
     children: customRoute
   },
   {

@@ -35,7 +35,7 @@ export class HeaderSwitcherComponent {
   }
 
   signout() {
-    this.auth.SignOut();
+    //this.auth.SignOut();
     this.router.navigate(['/auth/login']);
   }
 

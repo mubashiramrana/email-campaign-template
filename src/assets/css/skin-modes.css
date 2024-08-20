@@ -868,7 +868,7 @@
 
 .light-menu .slide-menu li.active>a,
 .light-menu .slide-menu li:hover>a {
-    color: var(--primary-bg-color) !important;
+    color: #1c2030 !important;
 }
 
 .light-menu .side-item.side-item-category {

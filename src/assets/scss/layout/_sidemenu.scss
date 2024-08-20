@@ -601,6 +601,7 @@ slide is-expanded side-menu__item {
 .side-menu .slide .side-menu__item.active .side-menu__label {
   color: $default-color !important;
   font-weight: 600;
+  cursor: pointer;
 }
 
 
@@ -616,10 +617,11 @@ slide is-expanded side-menu__item {
   font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
-
+  cursor: pointer !important;
   &.active,
   &:hover,
   &:focus {
+    cursor: pointer;
     text-decoration: none;
     color: $primary;
   }
@@ -670,6 +672,7 @@ slide is-expanded side-menu__item {
     .side-menu__icon {
       color: #7b8191;
       fill: #7b8191;
+      cursor: pointer;
     }
   }
 

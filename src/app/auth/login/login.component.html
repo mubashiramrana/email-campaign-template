@@ -44,17 +44,16 @@
                                                     class="text text-danger mt-1">
                                                     Password is required
                                                 </div>
-                                                </div><button class="btn btn-primary btn-block" autofocus [class.loader--text]="authService.showLoader"
-                                                [disabled]="!loginForm.valid || authService.showLoader"
+                                                </div><button class="btn btn-primary btn-block" autofocus 
                                                 (click)="login()">Sign In</button>
                                                 <div class="mt-4 d-flex mx-auto text-center justify-content-center mb-2">
-                                                    <button (click)="loginGoogle()" class="btn btn-icon me-3" type="button">
+                                                    <button class="btn btn-icon me-3" type="button">
                                                         <span class="btn-inner--icon"> <i class="bx bxl-google tx-18 tx-prime"></i> </span>
                                                     </button>
-                                                    <button (click)="loginFacebook()" class="btn btn-icon btn-facebook me-3" type="button">
+                                                    <button class="btn btn-icon btn-facebook me-3" type="button">
                                                         <span class="btn-inner--icon"> <i class="bx bxl-facebook tx-18 tx-prime"></i> </span>
                                                     </button>
-                                                    <button (click)="loginTwitter()" class="btn btn-icon me-3" type="button">
+                                                    <button  class="btn btn-icon me-3" type="button">
                                                         <span class="btn-inner--icon"> <i class="bx bxl-twitter tx-18 tx-prime"></i> </span>
                                                     </button>
                                                     <button class="btn  btn-icon me-3" type="button">

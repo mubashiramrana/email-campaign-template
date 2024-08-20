@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/shared/services/firebase/auth.service';
 })
 export class VerifyEmailComponent implements OnInit {
 
-  constructor(public authService: AuthService, private _location: Location) { }
+  constructor( private _location: Location) { }
 
   ngOnInit(): void {
     document.querySelector('body')?.classList.remove('horizontal');

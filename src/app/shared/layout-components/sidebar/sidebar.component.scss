@@ -116,6 +116,7 @@ perfect-scrollbar{
 }
 .sidenav-toggled-open .side-menu .slide.active .side-menu__label,  .side-menu .slide.active .side-menu__icon {
     color: #4a4a69 !important;
+    cursor: pointer !important;
 }
 
 .rtl:not(.horizontal) {
@@ -133,6 +134,7 @@ perfect-scrollbar{
 .transparent-theme.horizontal-hover{
     .slide:hover .side-menu__label,  .slide:hover .angle,  .slide:hover .side-menu__icon{
         color: #fff !important;
+        cursor: pointer !important;
     }
 }
 
