@@ -16435,6 +16435,7 @@ a.tag-addon:hover {
     margin-left: 10px;
 }
 
+ /* for setting project color */
 :root {
     --primary-bg-color: #38cab3;
     --primary-bg-hover: #5cd3b9;
