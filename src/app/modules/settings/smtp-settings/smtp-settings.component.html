@@ -1,0 +1,30 @@
+<div class="mt-4">
+    <div class="mt-4">
+        <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="main-content-label mg-b-5">
+                        {{"SMTP Settings"}}
+                    </div>
+                    <div></div>
+                    <mat-tab-group>
+                        <mat-tab label="Notifications SMTP">
+                            <app-dynamic-reactive-form
+                            [formConfig]="notificationSMTPFields"
+                            [title]="''"
+                            >
+                            </app-dynamic-reactive-form>
+                        </mat-tab>
+                        <mat-tab label="Forward SMTP">
+                            <app-dynamic-reactive-form
+                            [formConfig]="forwardSMTPFields"
+                            [title]="''"
+                            >
+                            </app-dynamic-reactive-form>
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

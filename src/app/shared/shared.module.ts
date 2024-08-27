@@ -22,6 +22,8 @@ import { NgScrollbarModule, NG_SCROLLBAR_OPTIONS } from 'ngx-scrollbar';
 import { SwitcherLayoutComponent } from './layout-components/layout/switcher-layout/switcher-layout.component';
 import { HeaderSwitcherComponent } from './header-switcher/header-switcher.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DynamicReactiveFormComponent } from './layout-components/dynamic-forms/dynamic-reactive-form/dynamic-reactive-form.component';
 
 
 @NgModule({
@@ -43,18 +45,28 @@ import { TranslateModule } from '@ngx-translate/core';
     HoverEffectSidebarDirective,
     ToggleThemeDirective,
     SidemenuToggleDirective,
+    DynamicReactiveFormComponent
   ],
   imports: [
     TranslateModule.forChild(),
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     RouterModule,
     NgScrollbarModule,
     ColorPickerModule
   ],
-  exports : [
-    PageHeaderComponent, TabToTopComponent, FullLayoutComponent, ContentLayoutComponent, ErrorLayoutComponent, SwitcherComponent,SwitcherLayoutComponent, LoaderComponent
+  exports: [
+    PageHeaderComponent,
+    TabToTopComponent,
+    FullLayoutComponent,
+    ContentLayoutComponent,
+    ErrorLayoutComponent,
+    SwitcherComponent,
+    SwitcherLayoutComponent,
+    LoaderComponent,
+    DynamicReactiveFormComponent
   ],
- 
 })
 export class SharedModule { }

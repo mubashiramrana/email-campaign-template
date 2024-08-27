@@ -28,21 +28,21 @@
 // @import '~ngx-toastr/toastr.css';
 
 // angular-archwizard
-@import '~angular-archwizard/styles/archwizard.css';
+// @import '~angular-archwizard/styles/archwizard.css';
 
 // quill
-@import '~quill/dist/quill.core.css';
-@import '~quill/dist/quill.bubble.css';
-@import '~quill/dist/quill.snow.css';
+// @import '~quill/dist/quill.core.css';
+// @import '~quill/dist/quill.bubble.css';
+// @import '~quill/dist/quill.snow.css';
 
 // .owl-carousel
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+// @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+// @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 // angular material
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-@import "../node_modules/angular-calendar/css/angular-calendar.css";
+// @import "../node_modules/angular-calendar/css/angular-calendar.css";
 
 // custom-css import
 @import './assets/css/icons.css';
@@ -58,11 +58,11 @@
 @import './assets/switcher/css/switcher.css';
 @import './assets/switcher/demo.css';
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap');
+// @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 // font awsome
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-@import '../node_modules/angular-archwizard/styles/archwizard.css';
+// @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+// @import '../node_modules/angular-archwizard/styles/archwizard.css';
 .color-menu,
 .gradient-menu {
   .side-menu .slide .side-menu__item.active .side-menu__icon {
@@ -954,4 +954,11 @@ ngb-toast{
   width: 1.5rem;
   height: 1.5rem;
   color: var(--primary05);
+}
+.app-button{
+  width: 200px !important;
+}
+
+::ng-deep .mat-tab{
+  margin: 0  !important;
 }

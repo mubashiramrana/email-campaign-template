@@ -39,12 +39,14 @@ export function switcherArrowFn() {
 
   // horizontal arrows
   fromEvent(window, 'resize').subscribe(() => {
+    console.log('resize')
     let menuWidth: any =
       document.querySelector<HTMLElement>('.horizontal-main');
     let sideMenu: any = document.querySelector('.side-menu');
     let menuItems: any = document.querySelector<HTMLElement>('.side-menu');
     let mainSidemenuWidth: any =
       document.querySelector<HTMLElement>('.main-sidemenu');
+      debugger;
     let menuContainerWidth =
       menuWidth?.offsetWidth - mainSidemenuWidth?.offsetWidth;
     let marginLeftValue = Math.ceil(
@@ -59,7 +61,7 @@ export function switcherArrowFn() {
       document.querySelector('.slide-left')?.classList.add('d-none');
       document.querySelector('.slide-right')?.classList.add('d-none');
     }
-
+debugger
     // to check and adjst the menu on screen size change
     if (document.querySelector('body')?.classList.contains('ltr')) {
       if (
@@ -142,6 +144,7 @@ export function switcherArrowFn() {
       document.querySelector<HTMLElement>('.main-sidemenu');
     let menuContainerWidth =
       menuWidth?.offsetWidth - mainSidemenuWidth?.offsetWidth;
+      console.log('width',menuContainerWidth)
     let marginLeftValue =
       Math.ceil(
         Number(window.getComputedStyle(menuItems).marginLeft.split('px')[0])

@@ -1,0 +1,29 @@
+@if(formConfig){
+<div class="mt-2">
+    <form
+        [formGroup]="dyanmicFrom"
+        (ngSubmit)="submitForm()"
+    >
+        <div *ngFor="let field of formConfig">
+            <div class="row row-sm">
+                <div class="col-lg">
+                    <p class="m-0">{{field.label}}</p>
+                    <input
+                        class="form-control mb-2"
+                        [type]="field.type"
+                        [formControlName]="field.key"
+                        [placeholder]="field.placeholder"
+                    />
+                    <div *ngIf="dyanmicFrom.controls[field.key].invalid && dyanmicFrom.controls[field.key].touched">
+                        <span *ngIf="dyanmicFrom.controls[field.key]?.errors?.['required']">This field is required.</span>
+                        <span *ngIf="dyanmicFrom.controls[field.key]?.errors?.['minlength']">Minimum length is {{field.validators.minLength }}.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary app-button">Save</button>
+        </div>
+    </form>
+</div>
+}

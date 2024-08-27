@@ -16435,7 +16435,6 @@ a.tag-addon:hover {
     margin-left: 10px;
 }
 
- /* for setting project color */
 :root {
     --primary-bg-color: #38cab3;
     --primary-bg-hover: #5cd3b9;
@@ -35112,7 +35111,7 @@ a.option-dots {
 }
 
 .side-menu .slide .side-menu__item {
-    padding: 10px 91px 10px 30px;
+    padding: 10px 91px 10px 10px;
     margin: 0;
     border-radius: 0;
 }
@@ -35298,7 +35297,7 @@ slide is-expanded side-menu__item {
     align-items: center;
     color: #7b8191;
     position: relative;
-    font-size: 14px;
+    font-size: 11px;
     line-height: 1;
     vertical-align: middle;
     font-weight: 400;
