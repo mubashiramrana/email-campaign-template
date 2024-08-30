@@ -103,7 +103,7 @@ export class NavService implements OnDestroy {
 			headTitle: 'Settings',
 		},
 		{
-			title: 'Settings', icon: 'settings', type: 'sub', active: false, children: [
+			title: 'Setting', icon: 'settings', type: 'sub', active: false, children: [
 				{ path: '/settings/account-settings', title: 'Account Setting', type: 'link' },
 				{ path: '/settings/sms-settings', title: 'SMS Settings', type: 'link' },
 				{ path: '/settings/smtp-settings', title: 'SMTP Settings', type: 'link' },

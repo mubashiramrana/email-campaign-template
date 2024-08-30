@@ -1,0 +1,17 @@
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label:first-child  {
+    color:red;
+    background-color: green;
+  }
+  
+  ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label:first-child:hover  {
+    color:green;
+    background-color: red;
+  }
+
+  ::ng-deep .mat-mdc-tab{
+    // background-color: red !important;
+  }
+  
+  ::ng-deep .mat-mdc-tab-group, .mat-mdc-tab-nav-bar{
+    --mat-tab-header-inactive-hover-label-text-color:red
+  }

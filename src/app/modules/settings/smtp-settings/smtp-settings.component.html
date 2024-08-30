@@ -7,8 +7,10 @@
                         {{"SMTP Settings"}}
                     </div>
                     <div></div>
-                    <mat-tab-group>
-                        <mat-tab label="Notifications SMTP">
+                    <mat-tab-group [dynamicHeight]="true">
+                        <mat-tab label="Notifications SMTP"
+                        
+                        >
                             <app-dynamic-reactive-form
                             [formConfig]="notificationSMTPFields"
                             [title]="''"
